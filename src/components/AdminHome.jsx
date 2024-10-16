@@ -23,7 +23,7 @@ function AdminHome({ user }) {
 
   function handleClick(e) {
     e.preventDefault();
-    fetch(`http://localhost:4000/v1/signos/${signoEditar}`, {
+    fetch(`https://backend-horoscopo.vercel.app/v1/signos/${signoEditar}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ textoEditar }),

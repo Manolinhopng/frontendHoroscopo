@@ -12,10 +12,13 @@ function Form({ callback }) {
     event.preventDefault();
     console.log("Datos enviados:", { username, password });
     try {
-      const response = await axios.post("http://localhost:4000/v1/auth/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://backend-horoscopo.vercel.app/v1/auth/login",
+        {
+          username,
+          password,
+        }
+      );
 
       if (response.status === 200 && response.data.success) {
         const role = response.data.role;
